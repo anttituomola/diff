@@ -3,8 +3,8 @@ import { patienceDiff } from "./diff.js"
 import { useState } from 'react';
 
 function App() {
-    const [initialContent, setInitialContent] = useState("Hello World");
-    const [editedContent, setEditedContent] = useState("Hello again");
+    const [initialContent, setInitialContent] = useState("Hello World \n This is the second line");
+    const [editedContent, setEditedContent] = useState("Hello again \n This is the second line");
     const initialContentArray = initialContent.split("\n");
     const editedContentArray = editedContent.split("\n");
     const results = patienceDiff(initialContentArray, editedContentArray, true);
